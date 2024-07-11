@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>FlexBox Practice 4</title>
+ <style>
+    .d1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+        height: 40px;
+        border-width: 1px;
+        border-color: gray;
+        border-style: solid;
+    }
+    
+    .number {
+        background-color: rgb(0, 98, 255);
+        color: white;
+        
+        border-radius: 9px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-right: 6px;
+        padding-left: 6px;
+        margin-right: 2px;
+    }
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d1">
+            <div class="d11">
+                Home
+            </div>
+            <div class="d12">
+                <span class="number">14</span>
+            </div>
+        </div>
+
+
+        <div class="d1">
+            <div class="d11">
+                Notifications
+            </div>
+            <div class="d12">
+                <span class="number">3</span>
+            </div>
+        </div>
+
+
+
+        <div class="d1">
+            <div class="d11">
+                Messages
+            </div>
+            <div class="d12">
+                <span class="number">5</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

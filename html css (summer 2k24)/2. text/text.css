@@ -1,0 +1,52 @@
+p{
+    font-family:Arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.title{
+    font-size:18px;
+    font-weight: bold;
+    width: 300px;
+    line-height: 24px;
+    margin-bottom: 0px;
+}
+.stats{
+    font-size: 13px;
+    color: rgb(96, 95, 95);
+    margin-top:0px ;
+    margin-bottom: 21px;
+}
+
+.credit{
+    font-size: 13px;
+    color: rgb(96, 95, 95);
+    margin-bottom:0px;
+}
+.video-description{
+    margin-top:20px;
+    font-size:14px;
+    color:rgb(96, 95, 95);
+    width: 300px;
+    line-height: 18px;
+    margin-bottom:100px;
+
+}
+
+.footer{
+     background-color: red;
+     color: white;
+     text-align: center;
+    
+     padding-bottom:18px ;
+     padding-top: 18px;
+     
+
+}
+
+.span-text:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+/*Note that paragraphs  have default margin 
+  of 14px on the top and bottom */

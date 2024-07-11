@@ -1,0 +1,18 @@
+1. HTML CODE STRUCTURE :-
+when we use link tag , to integrate css file to our html page
+<link rel="stylesheet" href="buttons.css">
+link  tags starts looking around for buttons.css in its own folder , if is unable to find 
+it , your css code will not be reflected.
+
+suppose my css file is in another folder (say style)
+we use the below tag
+<link rel="stylesheet" href="style/buttons.css">
+
+
+
+
+
+
+ 
+ 2. Every visible element on the html web page should be written into  body tag 
+    and other elements in head tag 

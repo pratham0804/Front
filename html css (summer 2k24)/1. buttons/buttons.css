@@ -1,0 +1,76 @@
+.subscribe-btn{
+    background-color: rgb(193, 0, 0);
+    color: #fff;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+    
+}
+
+.join-btn{
+    background-color: #fff;
+    color: rgb(7, 117, 243);
+    height: 35px;
+    width: 60px;
+    font-weight: bold;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(7, 117, 243);
+    cursor: pointer;
+    transition: background-color 1s,
+     color 1s;
+    /*we don't put these transition inhover , because as soon as we hover out of the button
+     transition is instant */
+
+}
+
+.request-btn
+{
+background-color: rgb(0,0,0);
+color: #fff;
+width: 100px;
+height: 35px;
+border: none;
+padding-top: 2px;
+padding-bottom: 2px;
+cursor: pointer;
+
+}
+
+
+.amazon{
+    background-color: rgb(255,216,20);
+    color: black;
+    border-radius: 50px;
+    border: none;
+    height: 35px;
+    width: 150px;
+    cursor: pointer;
+    margin-left:8px ;
+
+}
+
+.subscribe-btn:hover{
+    opacity: 0.9 ;
+}
+
+.subscribe-btn:active{
+    opacity: 0.5;
+    
+}
+
+
+
+
+.join-btn:hover{
+    background-color: rgb(7, 117, 243);
+    color: #fff;
+
+}
+.join-btn:active{
+    opacity: 0.7;
+}

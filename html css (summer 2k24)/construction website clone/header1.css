@@ -1,0 +1,60 @@
+.header {
+    background-color: white;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    position:absolute;
+    top: 50px;
+    left: 150px;
+    right: 150px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    border-radius: 12px;
+}
+.left-section {
+ width: 300px;
+ 
+}
+
+.logo {
+    height: 50px;
+    margin-left: 35px;
+}
+.middle-section{
+    flex-direction: column;
+    flex: 1;
+}
+.contact-details-header {
+    display: flex;
+    flex-direction: row;
+    color: rgb(172, 172, 172);
+    position: absolute;
+    top: 8px;
+    
+}
+.contact-details-header p {
+    margin-right: 30px;
+    
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 25px;
+    
+}
+.myspan {
+    margin-right: 25px;
+    font-family: Oswald,Arial;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 500ms;
+}
+
+.myspan:hover {
+    color: #FFBE00;
+}
+.right-section {
+    width: 200px;
+}

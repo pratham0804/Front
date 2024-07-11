@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+   padding-top: 80px;
+   
+}
+
+.header {
+    
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(225, 225, 225);
+
+
+}
+
+.end-section {
+    margin-right: 5px;
+    width: 180px ;
+}
+
+.middle-section {
+    
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px ;
+    max-width: 500px;
+    justify-content: space-between;
+    
+}
+
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.thumbnail-1{
+    width: 100%;
+  
+   
+    
+   
+}
+.video-title{
+    margin: 0px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+
+
+.video-author,.video-stats{
+    font-size: 12px;
+    margin-bottom: 6px;
+     color: rgb(96,96,96);
+}
+
+
+
+.channel-picture{
+    display: inline-block;
+    width: 50px;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+.video-info{
+    display: inline-block;
+    width: 200px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.profile-picture{
+    border-radius: 40px;
+    width: 100%;
+    
+
+}
+.thumbnail-container{
+    margin-bottom: 12px;
+    position: relative;
+    /* relative positon ki wajah se 
+    thumbnail header ko overlap krke scroll up 
+    ho raha hai kyuki positon relative , header ke niche likha hai , so in this situation , we use z-index */
+}
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+.video-time {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 6px;
+    right: 5px;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    opacity: 0.8;
+    border-radius: 2px;
+}
+
+body{
+    margin: 0;
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-bottom: 1500px;
+}
+.left-section {
+    display: flex;
+    align-items: center;
+    /*left section ko bhi flex box me convert kiya , to use the property align items. */
+}
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 20px;
+}
+.youtube-logo {
+    height: 20px;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+
+.Search-Bar {
+    height: 30px;
+    width: 0; /*search bar shows maximum possible shrink*/
+    flex: 1;
+    border-color: rgb(213, 213, 213);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: inset 1px 1px px rgba(0,0,0,0.15);
+}
+
+.Search-Bar::placeholder {
+    padding-left: 3px;
+}
+
+.search-icon{
+    height: 24px;
+    margin-top: 4px;
+}
+
+.search-btn {
+    height: 34px;
+    width: 60px;
+    border-width: 1px;
+    border-color: rgb(213, 213, 213);
+    border-style: solid;
+    margin-bottom: 1px;
+    margin-left: -1px;
+    /* negative margin  is for joinning search icon with search bar */
+
+}
+.voice-search-btn{
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    
+}
+.voice-search-icon {
+    height: 25px;
+    
+}
+
+
+.end-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.upload {
+    height: 24px;
+}
+.notifications {
+    height: 24px;
+}
+.youtube-apps {
+    height: 24px;
+}
+.profile-pic {
+    height: 24px;
+}
+
+.sidebar {
+       position: fixed;
+        bottom: 0;
+        left: 0;
+        top:55px;
+        background-color: white;
+        width: 72px;
+    }
+
+.notification-icon-container {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    /*Agar div se bahar jana hai toh use negative values */
+    background-color: red;
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 10px;
+
+}
+

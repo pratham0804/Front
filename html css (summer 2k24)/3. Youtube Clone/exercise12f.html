@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+            width: 800px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(115, 46, 179);
+            height: 60px;
+            align-items: center;
+        }
+        .left{
+            margin-left: 10px;
+            color: white;
+        }
+        .middle {
+            flex: 1;
+            margin-right: 30px;
+            margin-left: 20px;
+        }
+        .right {
+            margin-right: 10px;
+            
+            
+        }
+
+        .download {
+            border-color: white;
+            border-style: solid;
+            color: white;
+            background-color: rgb(115, 46, 179);
+            font-weight: bold;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .Search-Bar {
+            width: 100%;
+            border-radius: 20px;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 30px;
+            border: none;
+
+        }
+    </style>
+    <title> Flexbox ki exercise</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">Home</div>
+        <div class="middle">
+            <input  class="Search-Bar" type="text" placeholder=" Search">
+        </div> 
+        <div class="right">
+            <button class="download">Download</button>
+        </div>
+    </div>
+</body>
+</html>

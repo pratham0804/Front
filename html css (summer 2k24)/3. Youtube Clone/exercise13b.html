@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Flexbox Practice 6</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 60px;
+
+        }
+        .d1{
+            background-color: lightpink;
+            width: 100px;
+        }
+
+        .d2 {
+            background-color: lightblue;
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .subcontainer {
+            background-color: lightblue;
+        }
+
+
+        .innertext ,.thirdtext {
+            background-color: black;
+
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d1">
+
+        </div>
+        <div class="subcontainer">
+            row1
+            <div class="d2">
+       
+
+                <div class="innertext">
+                    row2
+                </div>
+                <div class="thirdtext">
+                    row2
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+</body>
+</html>

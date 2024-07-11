@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Position Exercise</title>
+    <style>
+        
+        .container {
+            background-color: green;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+        }
+
+        .modal {
+            
+            position: fixed;
+            top: 275px;
+            bottom: 275px;
+            right: 550px;
+            left: 550px;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            border-color: gray;
+            border-width: 1px;
+            border-style: solid;
+           
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-bottom: 20px;
+
+        }
+        .p1 {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 30px;
+        
+        }
+        .p2 {
+            font-family: Arial;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .close-btn {
+            width: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        right sidebar
+    </div>
+    <div class="modal">
+        <p class="p1">
+            Modal Title
+        </p>
+        <p class="p2">
+            This is a modal
+        </p>
+        <button class="close-btn">
+            Close
+        </button>
+    </div>
+
+</body>
+</html>
