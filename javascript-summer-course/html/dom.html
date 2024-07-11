@@ -1,0 +1,37 @@
+<!--dom is built in object (document) it represents or models webpage it contains properties like body and title , which can be accesed using dot notation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+
+
+
+
+  <script>
+    document.body.innerHTML = 'hello';
+    console.log(document.title);
+    document.title = 'Changed' ;
+
+
+
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    
+    // innerHTML gives us control of all the html content inside the body tag.
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button>Good job!</button>';
+
+
+
+    // now lets move to the methods in document object .
+
+  </script>
+</body>
+</html>

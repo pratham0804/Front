@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>App</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <button class="addtocart-btn">
+    Add to cart
+  </button>
+
+  <div class="container">
+
+  </div>
+
+
+  <button class="addMessage">Add</button>
+  <button class="removeMessage">Remove</button>
+  <!-- <button class="button">Start</button>
+    -->
+    
+  <script> 
+
+  
+    // 12a
+    const add = function(){
+      console.log(2+3);
+    }
+
+    console.log(add());
+    console.log(add());
+
+    //12 b
+
+
+    function  function1() {
+      console.log('print twice');
+    }
+
+
+    function runtwice (parameter){
+      parameter();
+      parameter();
+    } 
+    
+    runtwice(function1);
+
+/*
+    //12c
+    const buttonElement = document.querySelector('.button') ;
+
+    function changeText(){
+      if(buttonElement.innerText !== 'Finished!'){
+      buttonElement.innerText = 'Loading...'
+        setTimeout(function(){
+      buttonElement.innerText  = 'Finished!';
+      } , 1000);
+
+      }
+      else {
+        buttonElement.innerText = 'Start';
+      }
+    
+    };
+
+
+    //adding  event  listener
+
+    buttonElement.addEventListener('click',changeText);
+*/
+
+
+    //12 e 
+/*
+    const buttonElement = document.querySelector('.addtocart-btn');
+
+    let htmlElement = '';
+
+    buttonElement.addEventListener('click' , () => {
+      htmlElement = '<p class="small-para">Added</p>';
+
+      document.querySelector('.container').innerHTML = htmlElement ;
+       
+
+        // First, cancel the previous timeout so that
+        // it doesn't remove the message too quickly.
+
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(function(){
+        document.querySelector('.container').innerHTML = '';
+      },2000)
+    });
+    */
+    //watch the  solution once for the above 
+
+
+    // 12 g
+/*
+      setInterval(() => {
+   
+        if (document.title === 'App') {
+          document.title = '(2) New messages';
+        } else {
+          document.title = 'App';
+        }
+      },1000);
+
+*/
+
+      // 12h
+/*
+      let  messages = 2;
+        setInterval(() => {
+        
+        if (document.title === 'App') {
+          document.title = `${messages} New messages`;
+        } else {
+          document.title = 'App';
+        }
+
+      },1000);
+
+      document.querySelector('.addMessage').addEventListener('click' , () => {
+        messages += 1 ;
+      })
+
+      document.querySelector('.removeMessage').addEventListener('click' , () => {
+        messages -= 1;
+      })
+*/
+
+      // 12i
+
+      let  messages = 2;
+        setInterval(() => {
+        if(messages>0){
+        if (document.title === 'App') {
+          document.title = `${messages} New messages`;
+        } else {
+          document.title = 'App';
+        }
+      }
+      },1000);
+
+      document.querySelector('.addMessage').addEventListener('click' , () => {
+        messages += 1 ;
+      })
+
+      document.querySelector('.removeMessage').addEventListener('click' , () => {
+        messages -= 1;
+      });
+            
+
+  </script>
+</body>
+</html>

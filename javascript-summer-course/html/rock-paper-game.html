@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <h2>Rock Paper Scissor</h2>
+    <button onclick="
+        playersChoice = 'Rock';
+        Game('Rock');
+      ">Rock</button>
+    <button onclick="
+    playersChoice = 'Paper';
+    Game('Paper');
+  ">Paper</button>
+    <button onclick="
+    playersChoice = 'Scissor';
+    Game('Scissor');
+  ">Scissor</button>
+
+  <script>
+
+    let playersChoice = '';
+    let computerChoice = '';
+    // This functions creates popups on the basis of respective choices .
+    function Game(playersChoice){
+        computerChoice = computerSelection();
+        console.log(computerChoice);
+      if(computerChoice === playersChoice){
+        alert(` Your move : ${playersChoice} , Computer's move : ${computerChoice}    :-  Its a Tie!`);
+      }
+      else {
+        if((computerChoice === 'Rock' && playersChoice === 'Paper') || (computerChoice ==='Paper' && playersChoice === 'Scissor') || (computerChoice === 'Scissor' && playersChoice === 'Rock')) {
+          alert(` Your move : ${playersChoice} , Computer's move : ${computerChoice}    :-  You won!`);
+        }
+        else {
+          alert(` Your move : ${playersChoice} , Computer's move : ${computerChoice}    :-  You Lost!`);
+        }
+      }
+    }
+
+
+
+
+    // This function returns random move made by computer.
+     let randomval;
+     let computerMove = '' ;
+     function computerSelection(){
+       randomval = Math.floor(Math.random()* 3) + 1;
+     if(randomval === 1){
+      computerMove = 'Rock' ;
+     }
+     else if(randomval === 2){
+      computerMove = 'Paper' ;
+     }
+     else {
+      computerMove = 'Scissor' ;
+     }
+
+     return computerMove;
+    }
+  </script>
+</body>
+</html>

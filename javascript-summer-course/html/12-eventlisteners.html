@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Listener</title>
+</head>
+<body>
+  <script>
+    const buttonElement = document.querySelector('.js-button');
+    
+    const eventListener = () => {
+      console.log('click');
+    };
+
+    buttonElement.addEventListener('click',eventListener);
+
+    buttonElement.removeEventListener('click',
+      eventListener);
+
+
+    // we can add multiple eventlisterns  using method addEventListener unlike onclick attribute .
+    
+    buttonElement.addEventListener('click' , () => {
+      console.log('click2')
+    });
+  </script>
+</body>
+</html>

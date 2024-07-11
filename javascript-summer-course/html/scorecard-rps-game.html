@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <h2>Rock Paper Scissor</h2>
+    <button onclick="
+        playersChoice = 'Rock';
+        Game('Rock');
+      ">Rock</button>
+
+
+    <button onclick="
+    playersChoice = 'Paper';
+    Game('Paper');
+  ">Paper</button>
+
+
+    <button onclick="
+    playersChoice = 'Scissor';
+    Game('Scissor');
+  ">Scissor</button>
+  
+  <button onclick="
+    score.wins = 0;
+    score.ties = 0;
+    score.losses = 0;
+    localStorage.removeItem('score');
+  ">Reset Score</button>
+
+  <script>
+    //scorecard using object score
+    // let score = {
+    //   wins: 0,
+    //   losses: 0,
+    //   ties : 0   
+    // };
+
+    // we will get a result in string(JSON) format , so we convert string bacck to object using JSON.parse().
+
+    // initially value stored inside score is null ,so we add default score in it .
+      let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses : 0,
+            ties : 0 
+          }; 
+
+    // giving default values.
+    // but instead of giving it separately we use default operators( || ).
+     /*
+      if(score === null){
+        score = {
+          wins: 0,
+          losses : 0,
+          ties : 0 
+        };
+        
+      }
+      */
+    let playersChoice = '';
+    let computerChoice = '';
+    // This functions creates popups on the basis of respective choices .
+    function Game(playersChoice){
+        computerChoice = computerSelection();
+        console.log(computerChoice);
+
+      if(computerChoice === playersChoice){
+
+        score.ties += 1;
+
+        alert(` Your move : ${playersChoice} , Computer's move : ${computerChoice}    :-  Its a Tie!\nWins: ${score.wins} , Losses: ${score.losses} , Ties: ${score.ties}`);
+
+        // Both the parameters in setItem must be string , so to convert into string we use JSON.stringify().
+        localStorage.setItem('score' , JSON.stringify(score));
+
+      }
+      else {
+
+        if((computerChoice === 'Rock' && playersChoice === 'Paper') || (computerChoice ==='Paper' && playersChoice === 'Scissor') || (computerChoice === 'Scissor' && playersChoice === 'Rock')) {
+          score.wins += 1;
+
+          alert(` Your move : ${playersChoice} , Computer's move : ${computerChoice}    :-  You won!\n
+          Wins: ${score.wins} , Losses: ${score.losses} , Ties: ${score.ties}`);
+
+          // Both the parameters in setItem must be string , so to convert into string we use JSON.stringify().
+          localStorage.setItem('score' , JSON.stringify(score));
+        }
+        else {
+
+          score.losses += 1;
+
+          alert(` Your move : ${playersChoice} , Computer's move : ${computerChoice}    :-  You Lost!\nWins: ${score.wins} , Losses: ${score.losses} , Ties: ${score.ties}`);
+
+          // Both the parameters in setItem must be string , so to convert into string we use JSON.stringify().
+          localStorage.setItem('score' , JSON.stringify(score));
+        }
+      }
+    }
+    // Both the parameters in setItem must be string , so to convert into string we use JSON.stringify().
+    localStorage.setItem('score' , JSON.stringify(score));
+
+
+    // This function returns random move made by computer.
+     let randomval;
+     let computerMove = '' ;
+
+     
+     function computerSelection(){
+       randomval = Math.floor(Math.random()* 3) + 1;
+     if(randomval === 1){
+      computerMove = 'Rock' ;
+     }
+     else if(randomval === 2){
+      computerMove = 'Paper' ;
+     }
+     else {
+      computerMove = 'Scissor' ;
+     }
+
+     return computerMove;
+    }
+
+
+
+    //function to reset score.
+    // function resetScore(){
+    //   score.wins = 0 ;
+    //   score.ties = 0 ;
+    //   score.losses = 0 ;
+    // }
+
+  </script>
+</body>
+</html>

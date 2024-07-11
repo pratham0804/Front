@@ -1,0 +1,57 @@
+
+
+body {
+  font-family: Arial;
+}
+
+.Todo-entries {
+  height: 26px;
+  padding-left: 3px;
+}
+
+.date-selector {
+  height: 27px;
+  padding-left: 8px;
+}
+
+.js-add-btn {
+  height: 31px;
+  width: 90px;
+  border-radius: 1px;
+  padding-right: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+
+}
+
+.todo-components {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  margin-bottom: 6px;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 150px 100px ;
+  column-gap: 10px;
+  padding-left: 3px;
+  
+  
+}
+
+.container p {
+  font-size: 14px;
+}
+.container button {
+  height: 31px;
+  width: 90px;
+  border-radius: 1px;
+  padding-right: 10px;
+  background-color: darkred;
+  color: white;
+  border: none;
+  margin-left: -2px;
+}

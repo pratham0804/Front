@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Head and Tails Game</title>
+</head>
+<body>
+  <button onclick="
+    guess('heads');
+    ">heads</button>
+
+     
+  <button onclick="
+    guess('tails');
+  ">tails</button>
+  
+
+  <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    localStorage.removeItem('score');  
+  ">Reset Score</button>
+  <script>
+    // get the score as soon as page is loaded.
+     let score = JSON.parse(localStorage.getItem('score'));
+    
+     // default values if score is null.
+     if(score === null){
+        score = {
+          wins: 0,
+          losses : 0
+        };
+     }
+
+
+    // function that gives result.
+    function guess(playersChoice){
+      computerMove = ComputerSelection();
+      if(playersChoice === computerMove){
+        score.wins += 1;
+        alert(`Your guess ${playersChoice} , Computer's guess ${computerMove}  , Wins : ${score.wins} , Losses : ${score.losses} , You guessed right!`);
+
+        localStorage.setItem('score' , JSON.stringify(score));
+
+      }
+      else{
+        score.losses +=1;
+        alert(`Your guess ${playersChoice} , Computer's guess ${computerMove}  , Wins : ${score.wins} , Losses : ${score.losses} , You guessed wrong!`);
+
+        localStorage.setItem('score' , JSON.stringify(score));
+      }
+    }
+
+
+
+
+    // function to randomly select among the two options 
+      let randomValue ;
+      let computerMove = '';
+
+    function ComputerSelection(){
+      randomValue = Math.random();
+      if(randomValue > 0.5){
+        computerMove = 'heads';
+      }
+      else 
+      {
+        computerMove = 'tails';
+      }
+      
+      return computerMove;
+    }
+  </script>
+</body>
+</html>

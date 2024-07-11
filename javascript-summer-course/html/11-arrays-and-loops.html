@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  
+
+  <script>
+      const myArray = [
+        10,
+        20,
+        30
+      ];
+      console.log(myArray);
+
+      console.log(myArray[0]);
+
+      myArray[0]= 99 ;
+      console.log(myArray);
+
+      [1 , 'hello' , true , { name : 'socks'} , [1,2]] ; 
+
+      // Array is a special kind of object 
+
+      // In other programming  languages we learnt that array stores same kind of data 
+      
+      // lets check in js 
+
+      console.log(Array.isArray([1 , 'hello' , true , { name : 'socks'} , [1,2]]));
+
+      // answer is true 
+
+      myArray.push(100);
+      console.log(myArray);
+
+      // .splice(index value , number of values  to be deleted )
+
+      myArray.splice(0,1);
+
+      console.log(myArray);
+       
+
+
+
+
+      /// LOOPS
+
+
+
+
+      // arrays are also references like objects .
+
+      // some array shortcuts 
+       
+      const [firstValue , secondValue] = [1,2,3] ;
+
+      
+
+       
+  </script>
+</body>
+</html>

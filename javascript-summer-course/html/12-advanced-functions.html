@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Advanced functions</title>
+</head>
+<body>
+  <script>
+  
+    // in javascripts functions are values 
+    /* we can save it in variables 
+       
+    const fuction1 = function(){
+      console.log('hello2');
+    }
+
+
+    But this kind of syntax of writing functions do not support the feature like 
+    hoisting.
+
+    Hoisting means , order of calling the function and writing it does not  matter 
+    we can call function in before lines , to which the function actually written is.
+
+    function default synntax supports hoisting
+
+    */
+
+    const object1 = {
+      num: 2,
+
+      //method
+      fun : function greeting()
+      {
+        console.log('hello3');
+      }
+    };
+
+    object1.fun();
+
+
+    // since function are values we can pass functtions into another functions . This is known as callback function .
+
+
+
+
+    // **** setTimeout()  :- built in function , we use it if we want to call a function in future .
+
+    // the below  section of code is asynchronous.
+    setTimeout(function(){
+      console.log('timeout')
+    },3000);
+
+    console.log('next line');
+
+
+    // few advantages of asynchronous programming 
+
+    //* It doesn't block our code for 3 seconds
+    
+
+
+    //***** setInterval() :- built in function 
+
+    setInterval(function(){
+      console.log('interval')
+    },3000) ;
+
+
+    // setInterval continues to call function  after a given time . 
+
+     
+    // for each loop
+
+    [
+      'make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach(function(value,index){
+
+      if(value === 'wash dishes'){
+        return;
+      }
+
+
+        console.log(value);
+        console.log(index);
+    })
+
+
+ // ADVANCED FUNCTION PART 2
+   // ARROW FUNCTIONS 
+
+   const arrowFunction = (param , param2) => {
+    console.log('hello');
+    return 5;
+   }
+
+
+   arrowFunction();
+
+   const oneParam = (param1) => {
+    console.log(param1 + 1) ;
+   };
+
+   oneParam(2);
+
+   const oneLine = () => 2+3 ;
+   console.log(oneLine()) ;
+
+
+
+
+   // FILTER AND MAP 
+
+  </script>
+</body>
+</html>

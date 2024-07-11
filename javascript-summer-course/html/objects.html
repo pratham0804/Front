@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Objects
+    </title>
+  </head>
+  <body>
+    <script>
+
+      // const product = {
+      //   name : 'socks',
+      //   price : 1090 
+
+      // };
+
+      // console.log(product);
+      // console.log(product.name);
+
+      // product.name = 'cotton socks';
+      // console.log(product); 
+      
+
+      //  adding new property 
+      //   product.newProperty = true;
+      //   console.log(product);
+
+      //   for deleting property , delete <keyword class=""></keyword>
+
+      //   delete product.newProperty;
+      //   console.log(product);  
+
+      //  object is storing multiple values in property value pairs. 
+
+      const product2 = 
+      {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating:{
+          stars : 4.5,
+          count: 87 
+        },
+ 
+        fun : function function1(){
+          console.log('function inside object');
+        }
+      };
+
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      
+
+      console.log(product2.rating.count);
+
+      product2.fun();
+      
+      // function inside a object is known as method
+
+      // console.log is a method  , as console is an object and log is a function inside console.
+
+      //Math.random() is also an example 
+
+      // Now lets talk about some built in objects , JSON and localstorage
+
+
+      // ** JSON  is similar to objects with less features , JSON does not support single quote and function inside it .
+
+      // javascript syntax is known to javascript engine but json syntax is known to almost any programming language . 
+
+
+      // **** stringify is a function in JSON object that converts javascript object into JSON .... (it is of the type string) 
+
+      console.log(JSON.stringify(product2))
+
+      const jsonString = JSON.stringify(product2)
+
+
+
+      // this method converts JSON data back into javascript object .
+      console.log( JSON.parse(jsonString))
+
+
+      // storing values inside variables is temporary , when  we refresh the page , the values are vanished and reset to 0
+
+      // To tackle this we use local storage 
+
+      // local storage is a built in object , 
+      // it has  two methods , setItem() and get(Item)
+
+      // setItem() :- it accepts two string parameter , 
+      localStorage.setItem('message','hello');
+
+      // getItem() :- it accepts only one string parameter
+
+      console.log(localStorage.getItem('message'));
+      
+
+      // now lets apply this in rockk paper scissor game .
+
+
+
+
+
+      /**** Now lets learn about Auto Boxing , Javascript wraps  strings ,numbers and booleans in  a special box , which can have properties like objects . 
+       ***/
+      
+      // Auto boxing cannot be applied on null and undefined.
+       console.log('prathamesh'.length);;
+       console.log('jangle'.toUpperCase());
+
+
+
+
+
+
+
+      /**** Objects are actually references ****/
+        const object1 = {
+          message: 'hello'
+        };
+
+        /* {
+          message: 'hello'         this  segment is stored in different part of memory and object1 variable only has reference (address) , 
+
+        }; */
+        
+        const object2 = object1;
+        // only copy of refernce(address) is made , not entire objects.
+
+        
+        object1.message  = 'good morning'; 
+        console.log(object1);
+        console.log(object2);
+
+        // it returns same value , this proves the statement that objects are references . 
+
+        // object1 is const but stilll we can update properties of object1 , as only refernce will  not be potentially changable. 
+
+        // we cannot directly compare objects.
+
+        const object3 = {
+          message: 'good morning'
+        };
+
+        console.log(object1 == object3);
+        // it returns false .
+        // as here we compared the references instead of the values.
+
+
+        // const message = object3.message. 
+        const { message } =  object3
+
+        /*
+        const object4 = {
+          name : 'Prathamesh',
+          lastname : 'Jangle',
+          Age : 20 
+        };
+
+        const {name , Age} = object4;
+        */
+
+
+        // There is some short cut  used in objects 
+        // known as shorthand methods
+        
+
+        const object4 = {
+          name : 'Prathamesh',
+          lastname : 'Jangle',
+          Age : 20 ,
+          
+          // birthdate_calculation : function func1(){
+            
+          // }
+
+          birthdate_calculation(){
+
+          }
+
+          // works same 
+        };
+        
+        
+
+    </script >
+  </body>
+</html>
+
+<!-- Objects let us perform operations on multivalues  instead of operating individually.-->

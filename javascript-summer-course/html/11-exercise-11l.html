@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays and Loop exercise</title>
+ 
+</head>
+<body>
+  <script>
+
+    const array1 = []
+     
+     function findMinMax(array1) {
+
+      let result = {
+        minValue : null,
+        maxValue : null
+       };
+
+      if(array1.length === 0) {
+        return result;
+      }
+
+      if(array1.length === 1){
+        result = {
+        minValue : array1[0],
+        maxValue : array1[1]
+        };
+      }
+      
+    let minValue = array1[0];
+    let maxValue = array1[0];
+      
+       for(let i=1 ; i<array1.length  ; i++){
+        if(array1[i] < minValue){
+          minValue = array1[i];
+        }
+
+        if(array1[i]>maxValue){
+          maxValue = array1[i];
+        }
+       }
+
+       // a result object.
+        result = {
+        minValue : minValue,
+        maxValue : maxValue
+       }; 
+
+       return result;
+    }
+
+
+    console.log(findMinMax(array1));
+  </script>
+</body>
+</html>

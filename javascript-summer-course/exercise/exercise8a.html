@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Exercise 8a </title>
+</head>
+<body>
+    <script>
+      const product1 = {
+        name: 'basketball',
+        price : 2095  
+
+      };
+
+      console.log(product1);
+
+      //8b
+      console.log(product1.price + 500) ;
+
+
+      //8c
+      console.log(product1['delivery-time'] = '3 days');
+
+
+      //8d
+      
+      const product2 = {
+        name : 'football',
+        price : 5000
+      };
+
+      const comparePrice = function (product1,product2) {
+        if(product1 > product2) {
+          console.log('product1 is expensive');
+        }
+        else {
+          console.log('product2 is expensive');
+        }
+
+      }
+
+      comparePrice(product1.price,product2.price);
+
+
+
+
+      // 8e
+
+      const isSameProduct = function (product1, product2){
+        return ((product1.name === product2.name) && (product1.price === product2.price)) ;
+
+        
+      }
+
+      console.log(isSameProduct(product1,product2));
+
+
+      // 8g
+      // .repeat()
+      let wish = 'GoodMorning!';
+      console.log(wish.repeat(4));
+
+
+      // 8h 
+
+      // Important steps 
+      // We'll add localStorage to the calculator project. First , make a copy of the  project from exercise 7j 
+      // *Whenever  we update the calculation , save it using .setItem()
+      // * Whenever the page first loads , get the calculation using .getItem()
+      // * Use a default value of "if a calculatin doesn't exist in local storage".
+
+    </script>
+</body>
+</html>
